@@ -4,7 +4,10 @@ description: Second pass on the changes.
 disable-model-invocation: true
 ---
 
-Do a second pass on the changes. Examples of things you should do:
+Do a second pass on the changes.
+If the user didn't send a plan or specify the changes, assume it's the uncommited changes, or the branch against its parent branch.
+
+Examples of things you should do:
 - simplify
 - reuse
 - refactor
