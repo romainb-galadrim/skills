@@ -25,9 +25,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/github/gh-stack.git",
       "skillPath": "skills/gh-stack/SKILL.md",
-      "skillFolderHash": "6bfe555e89a6b264e09d5ece7c4040226458c8e5",
+      "skillFolderHash": "bde7bcf5a96697d31aa55b33565fa0ff002167ca",
       "installedAt": "2026-09-23T09:44:35.984Z",
-      "updatedAt": "2026-09-23T09:44:35.984Z"
+      "updatedAt": "2026-10-12T13:54:05.125Z"
     }
   },
   "dismissed": {
@@ -44,7 +44,9 @@
     "kilo",
     "kimi-code-cli",
     "opencode",
+    "pi",
     "warp",
-    "zed"
+    "zed",
+    "claude-code"
   ]
 }
