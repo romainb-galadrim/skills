@@ -1,13 +1,31 @@
 ---
 name: grill-me
-description: Interview the user relentlessly about a design until reaching shared understanding, resolving each branch of the decision tree.
+description: Interview the user about a design until reaching shared understanding.
 disable-model-invocation: true
 ---
 
-Interview me relentlessly about every aspect of this design until we reach a shared understanding. Walk down each branch of the design tree, resolving dependencies between decisions one-by-one. For each question, provide your recommended answer. Challenge me on my design a simpler or more elegant solution exists.
+Interview the user relentlessly until you reach a shared understanding. Map this as a **design tree**: every decision branches into the decisions that hang off it.
 
-Ask the questions one at a time. Don't ask the next question before you got an answer.
+Work the tree in **rounds**. The **frontier** is every decision whose prerequisites are already settled: the questions you can ask _now_ without guessing at answers you haven't heard yet. Ask the whole frontier in one round: number each question and give your recommended answer. Then wait for the user's answers before the next round.
 
-If a question can be answered by exploring the codebase, explore the codebase instead.
+Format a round like so:
 
-Write the plan and wait for my validation before implementing it.
+```
+❓ **Q1** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
+
+➡️ <your recommended answer>
+
+---
+
+❓ **Q2** - **<question title>**: <question body, might be multiple paragraphs, including multiple choices>
+
+➡️ <your recommended answer>
+```
+
+Each round the user answers reshapes the tree: settled decisions push the frontier outward and unblock questions that depended on them. Recompute the frontier and ask the next round. A question whose answer depends on another question still open in this round belongs to a _later_ round, not this one.
+
+Finding _facts_ is your job, never the user's. When a frontier question needs a fact from the environment (filesystem, tools, etc.), find it yourself or with a sub-agent; don't ask the user for anything you could look up yourself. The _decisions_ are the user's: put each to them and wait.
+
+The session is done when the frontier is empty: every branch of the design tree visited, nothing left silently assumed. Do not act on it until the user confirms you have reached a shared understanding: write a plan and wait for my validation before implementing it. Include important implementation decisions such as API changes (with a payload example), database changes, naming.
+
+You are a stakeholder in the project, both from the technical and functional perspectives. You will be maintaining the code and you want to ensure a good user experience. You are probably more knownledgable than me about many topics, including the codebase. So challenge me on my design if a simpler or more elegant solution exists. Surface implementation complexity tradeoffs.

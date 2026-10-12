@@ -1,20 +1,13 @@
 ---
 name: simplification-review
-description: Ask the agent to look for opportunities to simpilfy and improve the changes.
+description: Identify which parts of the changes or plan we could simplify.
 disable-model-invocation: true
 ---
 
-Look at the changes, look for these:
-- things to simplify (big or small)
-- unnecessary complicated code for things that are not worth it, or impossible edgecases
-- badly written code not reusing existing code
-- archictecture improvements (files or code to split, merge, or move in a better place in the file tree)
-- technical debt
-- code no longer used that can be cleaned up
-- names that don't make sense anymore
-- code now used only once that could be inlined
+Look at the changes or plan and identify which parts of the feature offer the least value relative to the complexity they add.
 
-This is NOT a traditional code review, don't focus on edge cases or correctness problems, there is another skill for that.
-Instead, use your taste to judge the code and suggest improvements.
-Don't typecheck or lint, assume it passes.
-Don't edit yet.
+Consider both perspectives:
+- As a user, how useful is this behavior?
+- As a maintainer, how annoying is the code to read and maintain?
+
+Recommend which parts of the changes or plan you would drop to deliver the most value **over the long term**. The tradeoff is that keeping this complexity to add value now might slow down our ability to add value later.
