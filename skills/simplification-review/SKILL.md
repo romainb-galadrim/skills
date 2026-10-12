@@ -1,6 +1,6 @@
 ---
 name: simplification-review
-description: Ask the agent to look for opportunities to simpilfy and improve the changes. Triggered by the user, never by the agent.
+description: Ask the agent to look for opportunities to simpilfy and improve the changes.
 disable-model-invocation: true
 ---
 
