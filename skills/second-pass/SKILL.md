@@ -1,7 +1,7 @@
 ---
 name: second-pass
 description: Second pass on the changes.
-disable-model-invocation: true
+disable-model-invocation: false
 ---
 
 Do a second pass on the changes.
