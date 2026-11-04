@@ -19,8 +19,9 @@ Just add these instructions:
 - Do not run checks that will take a long time such as compilation.
 
 Then, decide which problems are correct and worth addressing.
+Don't overengineer, the code shouldn't get bloated for irrealist edge cases.
 Discuss with the agent until you come to an agreement.
-Then implement the fixes.
+Then implement the fixes
 You can ask me questions if some fixes require a decision or walking back on a previous decision.
 Read the new changes you made, and for each one, ask yourself if it's worth it. If not, revert it.
 Report the fixes and the rejections (with the numbers, so I can reference them).
