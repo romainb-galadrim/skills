@@ -1,6 +1,6 @@
 ---
-name: writting-for-agents
-description: Use when writting text that will be consumed by other agents (subagents, message to another session, skills, etc)
+name: writing-for-agents
+description: Read before writing any text another agent will consume (subagents, new session, message to another session, skill, etc)
 ---
 
 Other agents have the same initial context (AGENTS.md, skills, tools, etc) as you did, so no need to list them.
