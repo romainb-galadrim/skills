@@ -5,7 +5,7 @@ disable-model-invocation: true
 ---
 
 Look at the changes or plan and identify which parts of the feature offer the least value relative to the complexity they add.
-If the user didn't send a plan or specify the changes, assume it's the uncommited changes, or the branch against its parent branch.
+If the user didn't send a plan or specify the changes, assume it's the uncommitted changes, or the branch against its parent branch.
 
 Consider both perspectives:
 - As a user, how useful and intuitive is this behavior?

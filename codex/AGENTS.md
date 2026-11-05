@@ -4,7 +4,7 @@
 - If a simpler or more elegant approach exists, say so. Push back when warranted.
 - Don't make your code more defensive than needed. No error handling for impossible scenarios.
 - Even if some of the context is in French, always think and respond in English if the question is asked in English.
-- When reviewing, also review the architecture and wether the feature could have been implemented in a simpler way.
+- When reviewing, also review the architecture and whether the feature could have been implemented in a simpler way.
 - I sometimes stage or commit your previous changes without telling you. Don't stage or commit your additional changes. Don't mention it, it's implicit.
 - Remove code that's unused after your changes.
 - Don't compliment my questions.

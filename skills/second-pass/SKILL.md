@@ -5,7 +5,7 @@ disable-model-invocation: false
 ---
 
 Do a second pass on the changes.
-If the user didn't send a plan or specify the changes, assume it's the uncommited changes, or the branch against its parent branch.
+If the user didn't send a plan or specify the changes, assume it's the uncommitted changes, or the branch against its parent branch.
 
 Examples of things you should do:
 - simplify

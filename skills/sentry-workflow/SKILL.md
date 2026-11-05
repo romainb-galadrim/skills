@@ -1,6 +1,6 @@
 ---
 name: sentry-workflow
-description: User workflow preferences when resloving a sentry issue. Should be read only if you are reading /sentry-cli skill
+description: User workflow preferences when resolving a Sentry issue. Should be read only if you are reading the /sentry-cli skill.
 ---
 
-- When deploying a fix, mark the issue as resolved (or resloved in next release)
+- When deploying a fix, mark the issue as resolved (or resolved in next release).
